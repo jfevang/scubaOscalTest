@@ -1,0 +1,329 @@
+{
+    "system-security-plan": {
+      "uuid": "cff8385f-108e-40a5-8f7a-82f3dc0eaba8",
+      "metadata": {
+        "title": "Cybersecurity and Infrastructure Security Agency SCuBA M365 Baseline Security Plan",
+        "published": "2024-07-25T03:39:25.069Z",
+        "last-modified": "2024-07-24T20:41:36.162599Z",
+        "version": "ScubaGear 1.3.0",
+        "oscal-version": "1.1.2",
+        "roles": [
+          {
+            "id": "prepared-for",
+            "title": "Cybersecurity and Infrastructure Security Agency",
+            "description": "The display name of the M365 tenant being assessed by ScubaGear."
+          },
+          {
+            "id": "prepared-by",
+            "title": "ScubaGear 1.3.0"
+          },
+          {
+            "id": "asset-administrator",
+            "title": "System Assets Admin"
+          },
+          {
+            "id": "asset-user",
+            "title": "System Assets User"
+          }
+        ],
+      "parties": [
+        {
+          "uuid": "3b2a5599-cc37-403f-ae36-5708fa804b27",
+          "type": "organization",
+          "name": "System Asset Administrators"
+        },
+        {
+          "uuid": "833ac398-5c9a-4e6b-acba-2a9c11399da0",
+          "type": "organization",
+          "name": "System Asset Users"
+        }
+      ]
+    },
+      "import-profile": {
+        "href": "#b78aa3ec-915d-475b-8097-46813fae1825"
+      },
+      "system-characteristics": {
+        "system-ids": [
+          {
+            "identifier-type": "https://ietf.org/rfc/rfc4122",
+            "id": "d7456980-9277-4dcb-83cf-f8ff0442623b"
+          }
+        ],
+        "system-name": "Cybersecurity and Infrastructure Secutiry Agency",
+        "description": "The M365 tenant being used.",
+        "props": [
+          {
+            "name": "TenantId",
+            "ns": "https://github.com/cisagov/ScubaGear/tree/oscal-exploration/oscal/ns/",
+            "value": "3c19c757-3b55-411f-b03f-2bcc514a598d"
+          },
+          {
+            "name": "DomainName",
+            "ns": "https://github.com/cisagov/ScubaGear/tree/oscal-exploration/oscal/ns/",
+            "value": "cisaent.onmicrosoft.com"
+          }
+        ],
+        "security-sensitivity-level": "moderate",
+        "system-information": {
+          "information-types": [
+            {
+              "uuid": "7d28ac6e-5970-4f4c-a508-5a3715f0f02b",
+              "title": "Information Security",
+              "description": "This system secures federal information assets stored within M365 cloud business application environment.",
+              "categorizations": [
+                {
+                  "system": "https://doi.org/10.6028/NIST.SP.800-60v2r1",
+                  "information-type-ids": [
+                    "C.3.5.5"
+                  ]
+                }
+              ],
+              "confidentiality-impact": {
+                "base": "fips-199-low"
+              },
+              "integrity-impact": {
+                "base": "fips-199-moderate"
+              },
+              "availability-impact": {
+                "base": "fips-199-low"
+              }
+            }
+          ]
+        },
+        "security-impact-level": {
+          "security-objective-confidentiality": "fips-199-low",
+          "security-objective-integrity": "fips-199-moderate",
+          "security-objective-availability": "fips-199-low"
+        },
+        "status": {
+          "state": "operational"
+        },
+        "authorization-boundary": {
+          "description": "The description of the authorization boundary would go here."
+        }
+      },
+      "system-implementation": {
+        "users": [
+          {
+            "uuid": "9824089b-322c-456f-86c4-4111c4200f69",
+            "title": "System Administrator",
+            "props": [
+              {
+                "name": "type",
+                "value": "internal"
+              }
+            ],
+            "role-ids": [
+              "asset-administrator"
+            ]
+          },
+          {
+            "uuid": "ae8de94c-835d-4303-83b1-114b6a117a07",
+            "title": "System User",
+            "props": [
+              {
+                "name": "type",
+                "value": "internal"
+              }
+            ],
+            "role-ids": [
+              "asset-user"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "uuid": "74042245-3db1-4f4d-be9a-ceb62d81152c",
+            "type": "this-system",
+            "title": "Cybersecurity and Infrastructure Security Agency",
+            "description": "The system described by this SSP.",
+            "status": {
+              "state": "operational"
+            }
+          },
+          {
+            "uuid": "e00acdcf-911b-437d-a42f-b0b558cc4f03",
+            "type": "software",
+            "title": "Microsoft Teams",
+            "description": "A cloud-based text and live chat workspace that supports video calls, chat messaging, screen sharing, and file sharing.",
+            "status": {
+              "state": "operational"
+            },
+            "responsible-roles": [
+              {
+                "role-id": "asset-user",
+                "party-uuids": [
+                  "833ac398-5c9a-4e6b-acba-2a9c11399da0"
+                ]
+              },
+              {
+                "role-id": "asset-administrator",
+                "party-uuids": [
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "795533ab-9427-4abe-820f-0b571bacfe6d",
+            "type": "guidance",
+            "title": "CISA M365 Security Configuration Baseline for Teams",
+            "description": "The CISA SCuBA SCBs for M365 help secure federal information assets stored within M365 cloud business application environments through consistent, effective, and manageable security configurations. ",
+            "props": [
+              {
+                "name": "version",
+                "value": "1"
+              }
+            ],
+            "status": {
+              "state": "operational"
+            },
+            "responsible-roles": [
+              {
+                "role-id": "asset-administrator",
+                "party-uuids": [
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "941e2a87-46f4-4b3e-9e87-bbd187091ca1",
+            "type": "software",
+            "title": "PowerShell",
+            "description": "The PowerShell scripting language.",
+            "status": {
+              "state": "operational"
+            },
+            "responsible-roles": [
+              {
+                "role-id": "asset-administrator",
+                "party-uuids": [
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "fa39eb84-3014-46b4-b6bc-7da10527c262",
+            "type": "software",
+            "title": "OPA Rego",
+            "description": "Rego is a query language designed for evaluating policy.",
+            "status": {
+              "state": "operational"
+            },
+            "responsible-roles": [
+              {
+                "role-id": "asset-administrator",
+                "party-uuids": [
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "4938767c-dd8b-4ea4-b74a-fafffd48ac99",
+            "type": "software",
+            "title": "ScubaGear",
+            "description": "an assessment tool that verifies that a Microsoft 365 (M365) tenant’s configuration conforms to the policies described in the Secure Cloud Business Applications (SCuBA) Security Configuration Baseline documents.",
+            "props": [
+              {
+                "name": "version",
+                "value": "1.3.0"
+              }
+            ],
+            "status": {
+              "state": "operational"
+            },
+            "responsible-roles": [
+              {
+                "role-id": "asset-administrator",
+                "party-uuids": [
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
+                ]
+              }
+            ]
+          }
+        ],
+        "inventory-items": [
+
+        ],
+        "remarks": "This is a partial implementation that addresses the logging server portion of the auditing system."
+      },
+      "control-implementation": {
+        "description": "This is the control implementation for the system.",
+        "implemented-requirements": [
+          {
+            "uuid": "aaadb3ff-6ae8-4332-92db-211468c52af2",
+            "control-id": "MS.TEAMS.1",
+            "statements": [
+              {
+                "statement-id": "MS.TEAMS.1_smt",
+                "uuid": "7ad47329-dc55-4196-a19d-178a8fe7438d"
+              },
+              {
+                "statement-id": "MS.TEAMS.1.2v1_stm",
+                "uuid": "f3887a91-9ed3-425c-b305-21e4634a1c34",
+                "by-components": [
+                  {
+                    "component-uuid": "795533ab-9427-4abe-820f-0b571bacfe6d",
+                    "uuid": "a74681b2-fbcb-46eb-90fd-0d55aa74ac7b",
+                    "description": "The SCB guidance explicitly states that anaonymous users SHALL NOT be enabled to start meetings.",
+                    "implementation-status": {
+                      "state": "implemented"
+                    }
+                  }
+                ]
+              },
+              {
+                "statement-id": "MS.TEAMS.1.6v1_stm",
+                "uuid": "6fe632bd-33aa-4eea-a507-a37f0d212085",
+                "by-components": [
+                  {
+                    "component-uuid": "795533ab-9427-4abe-820f-0b571bacfe6d",
+                    "uuid": "2d0a7b08-da7f-4691-b99c-8fd9df02b25c",
+                    "description": "The SCB guidance explicitly states that meeting recording SHOULD be disabled.",
+                    "implementation-status": {
+                      "state": "implemented"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "back-matter": {
+        "resources": [
+          {
+            "uuid": "b78aa3ec-915d-475b-8097-46813fae1825",
+            "description": "NIST Special Publication 800-53 Revision 4: Moderate Baseline Profile",
+            "rlinks": [
+              {
+                "href": "../../../nist.gov/SP800-53/rev4/xml/NIST_SP-800-53_rev4_MODERATE-baseline_profile.xml",
+                "media-type": "application/oscal.catalog+xml"
+              },
+              {
+                "href": "../../../nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_MODERATE-baseline_profile.json",
+                "media-type": "application/oscal.catalog+json"
+              },
+              {
+                "href": "../../../nist.gov/SP800-53/rev4/yaml/NIST_SP-800-53_rev4_MODERATE-baseline_profile.yaml",
+                "media-type": "application/oscal.catalog+yaml"
+              }
+            ]
+          },
+          {
+            "uuid": "805784ea-f7f9-411d-bb8f-9968c260c444",
+            "title": "ScubaGear Github repository",
+            "rlinks": [
+              {
+                "href": "https://github.com/cisagov/ScubaGear",
+                "media-type": "text/html"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
