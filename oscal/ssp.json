@@ -246,9 +246,39 @@
           }
         ],
         "inventory-items": [
-
-        ],
-        "remarks": "This is a partial implementation that addresses the logging server portion of the auditing system."
+          {
+            "uuid": "4392599a-9117-416a-87d1-24c7d1b2dd0b",
+            "description": "This is the custom GoodRead application within the system.",
+            "props": [
+              {
+                "name": "software-name",
+                "value": "IFA GoodRead",
+                "class": "webserver-application"
+              },
+              {
+                "name": "software-version",
+                "value": "1.0.0",
+                "class": "webserver-application"
+              },
+              {
+                "name": "asset-type",
+                "value": "web-server",
+                "class": "webserver-application"
+              }
+            ],
+            "implemented-components": [
+              {
+                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
+                "props": [
+                  {
+                    "name": "asset-id",
+                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       "control-implementation": {
         "description": "This is the control implementation for the system.",
