@@ -40,21 +40,32 @@
             "id": "8101e04d-8305-4e73-bb95-6b59f645b143"
           }
         ],
-        "system-name": "IFA GoodRead",
-        "description": "This system acts as a link shortener for IFA employees",
-        "date-authorized": "2023-05-19",
+        "system-name": "Cybersecurity and Infrastructure Secutiry Agency",
+        "description": "The M365 tenant being used.",
+        "props": [
+          {
+            "name": "TenantId",
+            "ns": "https://github.com/cisagov/ScubaGear/tree/oscal-exploration/oscal/ns/",
+            "value": "3c19c757-3b55-411f-b03f-2bcc514a598d"
+          },
+          {
+            "name": "DomainName",
+            "ns": "https://github.com/cisagov/ScubaGear/tree/oscal-exploration/oscal/ns/",
+            "value": "cisaent.onmicrosoft.com"
+          }
+        ],
         "security-sensitivity-level": "moderate",
         "system-information": {
           "information-types": [
             {
-              "uuid": "bccfbb65-a7f3-41ac-989f-01d96eddfdc7",
-              "title": "User-provided Links",
-              "description": "This system maintains a set of user-provided links and their associated shortlinks",
+              "uuid": "7d28ac6e-5970-4f4c-a508-5a3715f0f02b",
+              "title": "Information Security",
+              "description": "This system secures federal information assets stored within M365 cloud business application environment.",
               "categorizations": [
                 {
                   "system": "https://doi.org/10.6028/NIST.SP.800-60v2r1",
                   "information-type-ids": [
-                    "C.2.8.12"
+                    "C.3.5.5"
                   ]
                 }
               ],
@@ -62,9 +73,7 @@
                 "base": "fips-199-low"
               },
               "integrity-impact": {
-                "base": "fips-199-low",
-                "selected": "fips-199-moderate",
-                "adjustment-justification": "Maliciously modified links are a concern"
+                "base": "fips-199-moderate"
               },
               "availability-impact": {
                 "base": "fips-199-low"
@@ -81,13 +90,13 @@
           "state": "operational"
         },
         "authorization-boundary": {
-          "description": "This section describes an attached diagram of the authorization boundary for IFA GoodRead Project's information system."
+          "description": "This section describes an attached diagram of the authorization boundary for CISA M365 tenant's information system."
         },
         "network-architecture": {
-          "description": "This section describes an attached diagram of the network architecture for IFA GoodRead Project's information system."
+          "description": "This section describes an attached diagram of the network architecture for CISA M365 tenant's information system."
         },
         "data-flow": {
-          "description": "This section describes an attached diagram of various dataflows for application and related elements of the IFA GoodRead Project's information system."
+          "description": "This section describes an attached diagram of various dataflows for application and related elements of the CISA M365 tenant's information system."
         }
       },
       "system-implementation": {
