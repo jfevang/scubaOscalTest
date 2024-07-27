@@ -252,39 +252,7 @@
         ]
       },
       "control-implementation": {
-        "description": "This is the control implementation for the application and infrastructure that compose to the IFA GoodRead Project's system.",
-        "set-parameters": [
-          {
-            "param-id": "ac-06.01_odp.01",
-            "values": [
-              "individuals and roles with authorized access to security functions and security-relevant information are defined and not available to all users of the system;"
-            ]
-          },
-          {
-            "param-id": "ac-06.01_odp.02",
-            "values": [
-              "security functions (deployed in hardware) for authorized access are defined;"
-            ]
-          },
-          {
-            "param-id": "ac-06.01_odp.03",
-            "values": [
-              "security functions (deployed in soware) for authorized access are defined;"
-            ]
-          },
-          {
-            "param-id": "ac-06.01_odp.04",
-            "values": [
-              "security functions (deployed in firmware) for authorized access are defined;"
-            ]
-          },
-          {
-            "param-id": "ac-06.01_odp.05",
-            "values": [
-              "security-relevant information for authorized access is defined;"
-            ]
-          }
-        ],
+        "description": "This is the control implementation for the CISA M365 tenant system.",
         "implemented-requirements": [
           {
             "uuid": "aaadb3ff-6ae8-4332-92db-211468c52af2",
