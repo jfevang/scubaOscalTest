@@ -102,58 +102,40 @@
       "system-implementation": {
         "users": [
           {
-            "uuid": "00d323d3-dc3f-4d93-900f-f13430e094d3",
-            "title": "Application Administrator",
-            "description": "The developer of the application supports IFA Public Affairs Officers by administering the application and its infrastructure.",
+            "uuid": "9824089b-322c-456f-86c4-4111c4200f69",
+            "title": "System Administrator",
+            "props": [
+              {
+                "name": "type",
+                "value": "internal"
+              }
+            ],
             "role-ids": [
-              "developer"
+              "asset-administrator"
             ],
             "authorized-privileges": [
               {
-                "title": "Application Administrator Privilege",
+                "title": "System Administrator Privilege",
                 "functions-performed": [
                   "user-creation",
                   "user-enablement",
                   "user-disablement",
-                  "user-role-modification",
-                  "popular-shortlink-cache-reset",
-                  "database-export",
-                  "database-migration"
+                  "user-role-modification"
                 ]
               }
             ]
           },
           {
-            "uuid": "61405ba7-edb4-4243-8461-79aac5805e5c",
-            "title": "Public Affairs Officers",
-            "description": "IFA Public Affairs Officers (PAOs) in each division of the agency review public communications to citizens who are customers of the IFA. PAOs review requests from colleagues to generate and publish content that is the target of a shortlink and can unpublish shortlinks.",
-            "role-ids": [
-              "public-affairs-office"
+            "uuid": "ae8de94c-835d-4303-83b1-114b6a117a07",
+            "title": "System User",
+            "props": [
+              {
+                "name": "type",
+                "value": "internal"
+              }
             ],
-            "authorized-privileges": [
-              {
-                "title": "Public Affairs Officer Privilege",
-                "functions-performed": [
-                  "shortlink-generation",
-                  "shortlink-approval",
-                  "shortlink-rejection",
-                  "shortlink-publication",
-                  "shortlink-unpublication"
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "fb36760a-143d-490b-8fc4-6a8c172fba86",
-            "title": "General Public",
-            "description": "The general public is free to click on shortlinks",
-            "authorized-privileges": [
-              {
-                "title": "General Public Privilege",
-                "functions-performed": [
-                  "shortlink-view"
-                ]
-              }
+            "role-ids": [
+              "asset-user"
             ]
           }
         ],
