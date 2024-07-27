@@ -301,6 +301,38 @@
             ]
           }
         ]
+      },
+      "back-matter": {
+        "resources": [
+          {
+            "uuid": "b78aa3ec-915d-475b-8097-46813fae1825",
+            "description": "NIST Special Publication 800-53 Revision 4: Moderate Baseline Profile",
+            "rlinks": [
+              {
+                "href": "../../../nist.gov/SP800-53/rev4/xml/NIST_SP-800-53_rev4_MODERATE-baseline_profile.xml",
+                "media-type": "application/oscal.catalog+xml"
+              },
+              {
+                "href": "../../../nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_MODERATE-baseline_profile.json",
+                "media-type": "application/oscal.catalog+json"
+              },
+              {
+                "href": "../../../nist.gov/SP800-53/rev4/yaml/NIST_SP-800-53_rev4_MODERATE-baseline_profile.yaml",
+                "media-type": "application/oscal.catalog+yaml"
+              }
+            ]
+          },
+          {
+            "uuid": "805784ea-f7f9-411d-bb8f-9968c260c444",
+            "title": "ScubaGear Github repository",
+            "rlinks": [
+              {
+                "href": "https://github.com/cisagov/ScubaGear",
+                "media-type": "text/html"
+              }
+            ]
+          }
+        ]
       }
     }
   }
