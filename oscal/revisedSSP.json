@@ -143,22 +143,39 @@
           {
             "uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
             "type": "this-system",
-            "title": "IFA GoodRead System",
-            "description": "IFA develops, operates, and maintains the GoodRead link shortener system to ",
+            "title": "Cybersecurity and Infrastructure Security Agency",
+            "description": "The system described by this SSP and M356 tenant.",
             "status": {
               "state": "operational"
             },
             "responsible-roles": [
               {
-                "role-id": "developer",
+                "role-id": "asset-administrator",
                 "party-uuids": [
-                  "67c04291-dbf6-495a-a3ba-0011638acc94"
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "uuid": "795533ab-9427-4abe-820f-0b571bacfe6d",
+            "type": "guidance",
+            "title": "CISA M365 Security Configuration Baseline for Teams",
+            "description": "The CISA SCuBA SCBs for M365 help secure federal information assets stored within M365 cloud business application environments through consistent, effective, and manageable security configurations. ",
+            "props": [
               {
-                "role-id": "system-engineer",
+                "name": "version",
+                "value": "1"
+              }
+            ],
+            "status": {
+              "state": "operational"
+            },
+            "responsible-roles": [
+              {
+                "role-id": "asset-administrator",
                 "party-uuids": [
-                  "4ba3f2b7-e894-48d7-b940-91c68661df55"
+                  "3b2a5599-cc37-403f-ae36-5708fa804b27"
                 ]
               }
             ]
@@ -166,23 +183,58 @@
         ],
         "inventory-items": [
           {
-            "uuid": "4392599a-9117-416a-87d1-24c7d1b2dd0b",
-            "description": "This is the custom GoodRead application within the system.",
+            "uuid": "941e2a87-46f4-4b3e-9e87-bbd187091ca1",
+            "description": "The PowerShell scripting language.",
             "props": [
               {
                 "name": "software-name",
-                "value": "IFA GoodRead",
-                "class": "webserver-application"
+                "value": "PowerShell"
+              }
+            ],
+            "implemented-components": [
+              {
+                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
+                "props": [
+                  {
+                    "name": "asset-id",
+                    "value": "CISA-SYSTEM-M365-TEANT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "fa39eb84-3014-46b4-b6bc-7da10527c262",
+            "description": "Rego is a query language designed for evaluating policy.",
+            "props": [
+              {
+                "name": "software-name",
+                "value": "OPA Rego"
+              }
+            ],
+            "implemented-components": [
+              {
+                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
+                "props": [
+                  {
+                    "name": "asset-id",
+                    "value": "CISA-SYSTEM-M365-TEANT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "4938767c-dd8b-4ea4-b74a-fafffd48ac99",
+            "description": "An assessment tool that verifies that a Microsoft 365 (M365) tenant’s configuration conforms to the policies described in the Secure Cloud Business Applications (SCuBA) Security Configuration Baseline documents.",
+            "props": [
+              {
+                "name": "software-name",
+                "value": "ScubaGear"
               },
               {
                 "name": "software-version",
-                "value": "1.0.0",
-                "class": "webserver-application"
-              },
-              {
-                "name": "asset-type",
-                "value": "web-server",
-                "class": "webserver-application"
+                "value": "1.3.0"
               }
             ],
             "implemented-components": [
@@ -191,172 +243,7 @@
                 "props": [
                   {
                     "name": "asset-id",
-                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "d911b560-f564-4715-8d2a-76f86127ac73",
-            "description": "This is the web application framework upon which the developer writes the custom GoodRead application for the user interface and API of this system.",
-            "props": [
-              {
-                "name": "software-name",
-                "value": "Django Framework",
-                "class": "webserver-framework"
-              },
-              {
-                "name": "software-version",
-                "value": "4.2.1",
-                "class": "webserver-framework"
-              },
-              {
-                "name": "asset-type",
-                "value": "web-server",
-                "class": "webserver-framework"
-              }
-            ],
-            "implemented-components": [
-              {
-                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
-                "props": [
-                  {
-                    "name": "asset-id",
-                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "3e3a8d9a-e3d6-4c7d-b59b-a8d6514fa4a2",
-            "description": "This is the database for the custom GoodRead application within the system.",
-            "props": [
-              {
-                "name": "software-name",
-                "value": "PostgreSQL",
-                "class": "database"
-              },
-              {
-                "name": "software-version",
-                "value": "15.3",
-                "class": "database"
-              },
-              {
-                "name": "asset-type",
-                "value": "database",
-                "class": "database"
-              }
-            ],
-            "implemented-components": [
-              {
-                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
-                "props": [
-                  {
-                    "name": "asset-id",
-                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "0fb95c4c-ebfd-492e-8145-363eb7947dbe",
-            "description": "This is the operating system for the web server that runs the custom GoodRead application within the system.",
-            "props": [
-              {
-                "name": "software-name",
-                "value": "Red Hat Enterprise Linux 9",
-                "class": "operating-system"
-              },
-              {
-                "name": "asset-type",
-                "value": "operating-system",
-                "class": "operating-system"
-              }
-            ],
-            "implemented-components": [
-              {
-                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
-                "props": [
-                  {
-                    "name": "asset-id",
-                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "cd39f700-23ab-4574-a17e-c9c8f073cbec",
-            "description": "This inventory item is an instance from the AwesomeCloud Awesome Compute Service (ACS) Service. It is a Linux server.",
-            "props": [
-              {
-                "name": "asset-id",
-                "value": "instance-abcd1234",
-                "class": "linux-server"
-              },
-              {
-                "name": "ipv4-address",
-                "value": "172.1.2.3",
-                "class": "linux-server"
-              },
-              {
-                "name": "ipv4-address",
-                "value": "1.1.2.3",
-                "class": "linux-server"
-              },
-              {
-                "name": "uri",
-                "value": "instance-abcd1234.acs.awesomecloud.systems",
-                "class": "linux-server"
-              },
-              {
-                "name": "asset-type",
-                "value": "appliance",
-                "class": "linux-server"
-              }
-            ],
-            "implemented-components": [
-              {
-                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
-                "props": [
-                  {
-                    "name": "asset-id",
-                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "d9550535-40b9-4d8b-861c-07aa8786bf43",
-            "description": "This inventory item is an instance from the AwesomeCloud Awesome Load Balancer (ALB) Service. It is a Linux server.",
-            "props": [
-              {
-                "name": "asset-type",
-                "value": "appliance",
-                "class": "network-load-balancer"
-              },
-              {
-                "name": "asset-id",
-                "value": "instance-defg7890",
-                "class": "linux-server"
-              },
-              {
-                "name": "uri",
-                "value": "https://instance-defg7890.alb.awesomecloud.systems",
-                "class": "network-load-balancer"
-              }
-            ],
-            "implemented-components": [
-              {
-                "component-uuid": "551b9706-d6a4-4d25-8207-f2ccec548b89",
-                "props": [
-                  {
-                    "name": "asset-id",
-                    "value": "IFAGOV-SYSTEM1234-GOODREAD"
+                    "value": "CISA-SYSTEM-M365-TEANT"
                   }
                 ]
               }
